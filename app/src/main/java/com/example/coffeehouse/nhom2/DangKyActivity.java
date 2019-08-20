@@ -48,21 +48,11 @@ public class DangKyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ky);
         AnhXa();
-//        ActionBar();
-//        CheckPass();
+
         EventOnClick();
     }
-//
-//    private void ActionBar() {
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-//    }
+
+
 
     private void EventOnClick() {
         btnDangKy.setOnClickListener(new View.OnClickListener() {
@@ -116,58 +106,17 @@ public class DangKyActivity extends AppCompatActivity {
     }
 
     private void AnhXa() {
-//        layoutDKUser = (TextInputLayout) findViewById(R.id.layout_DKUser);
+
         edtDKUser = (EditText) findViewById(R.id.edt_DKUser);
-//        layoutDKpass = (TextInputLayout) findViewById(R.id.layout_DKpass);
+
         edtDKpass = (EditText) findViewById(R.id.edt_DKpass);
-//        layoutNLpass = (TextInputLayout) findViewById(R.id.layout_NLpass);
+
         edtNLpass = (EditText) findViewById(R.id.edt_NLpass);
         btnDangKy = (Button) findViewById(R.id.btn_Dang_Ky);
         relativeLayout = (RelativeLayout) findViewById(R.id.menu_progressbarDK);
-//        toolbar = findViewById(R.id.toolbarDK);
+
     }
-//    private void CheckPass() {
-//        edtDKpass.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                if (s.length() == 0){
-//                    layoutDKpass.setPasswordVisibilityToggleEnabled(false);
-//                }else {
-//                    layoutDKpass.setPasswordVisibilityToggleEnabled(true);
-//                }
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//
-//            }
-//        });
-//        edtNLpass.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                if (s.length() == 0){
-//                    layoutNLpass.setPasswordVisibilityToggleEnabled(false);
-//                }else {
-//                    layoutNLpass.setPasswordVisibilityToggleEnabled(true);
-//                }
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//
-//            }
-//        });
-//    }
+
     private void  DangKy(final String tk, final String mk){
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.duongdandangky, new Response.Listener<String>() {

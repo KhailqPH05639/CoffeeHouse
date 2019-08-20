@@ -41,19 +41,10 @@ public class DoiMKActivity extends AppCompatActivity {
         setContentView(R.layout.activity_doi_mk);
         AnhXa();
         GetThongTin();
-//        ActionBar();
+
     }
 
-//    private void ActionBar() {
-//        setSupportActionBar(toolbarDMK);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        toolbarDMK.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-//    }
+
 
     private void GetThongTin() {
         btnDMK.setOnClickListener(new View.OnClickListener() {
@@ -67,14 +58,13 @@ public class DoiMKActivity extends AppCompatActivity {
                 }else if (MKL1.equals("")){
                     edtMKL1.setError("Yêu cầu nhập dữ liệu");
                 }else if (MKL1.equals(MKL2)){
-                    menu_progressbarDMK.setVisibility(View.VISIBLE);
+
                     RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.duongdandoimatkhau, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             Intent intent = new Intent(DoiMKActivity.this,LoginActivity.class);
                             startActivity(intent);
-                            menu_progressbarDMK.setVisibility(View.GONE);
                         }
                     }, new Response.ErrorListener() {
                         @Override
@@ -99,15 +89,14 @@ public class DoiMKActivity extends AppCompatActivity {
     }
 
     private void AnhXa() {
-//        toolbarDMK = (Toolbar) findViewById(R.id.toolbarDMK);
-//        layoutMKHT = (TextInputLayout) findViewById(R.id.layout_MKHT);
+
         edtMKHT = (EditText) findViewById(R.id.edt_MKHT);
-//        layoutMKL1 = (TextInputLayout) findViewById(R.id.layout_MKL1);
+
         edtMKL1 = (EditText) findViewById(R.id.edt_MKL1);
-//        layoutMKL2 = (TextInputLayout) findViewById(R.id.layout_MKL2);
+
         edtMKL2 = (EditText) findViewById(R.id.edt_MKL2);
         btnDMK = (Button) findViewById(R.id.btn_DMK);
-//        menu_progressbarDMK = (RelativeLayout) findViewById(R.id.menu_progressbarDMK);
+
     }
 
     public void btnHome(View view) {

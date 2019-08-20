@@ -131,11 +131,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                if (s.length() == 0) {
-//                    layoutPass.setPasswordVisibilityToggleEnabled(false);
-//                } else {
-//                    layoutPass.setPasswordVisibilityToggleEnabled(true);
-//                }
+
             }
 
             @Override
@@ -155,9 +151,9 @@ public class LoginActivity extends AppCompatActivity {
     }
     private void AnhXa() {
         imageView = findViewById(R.id.imageView);
-//        layoutUser = (TextInputLayout) findViewById(R.id.layout_User);
+
         edtUser = (EditText) findViewById(R.id.edt_User);
-//        layoutPass = (TextInputLayout) findViewById(R.id.layout_pass);
+
         edtPass = (EditText) findViewById(R.id.edt_pass);
         btnDangNhap = (Button) findViewById(R.id.btn_Dang_Nhap);
         btnDangKy = (TextView) findViewById(R.id.btn_Dang_Ky);
